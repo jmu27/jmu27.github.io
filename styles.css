@@ -51,11 +51,12 @@ h1 { margin: 0 0 .2em; font-size: 32px; font-weight: 600; line-height: 1.1; lett
 .photo { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center; }
 
 section { margin: 20px 0; scroll-margin-top: 4.5rem; }
+section + section { border-top: 1px solid var(--rule); padding-top: 20px; }
 section h2 { margin: 0 0 16px; font-size: 20px; font-weight: 600; line-height: 1.5; letter-spacing: 0; }
 section p { margin: 0 0 12px; color: var(--ink-soft); }
 .equal-note { color: var(--muted); font-size: 14px; }
-.publication-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--rule); counter-reset: papers; }
-.publication-list li { position: relative; padding: 12px 0 12px 2.25rem; border-bottom: 1px solid var(--rule); counter-increment: papers; }
+.publication-list { margin: 0; padding: 0; list-style: none; counter-reset: papers; }
+.publication-list li { position: relative; padding: 12px 0 12px 2.25rem; counter-increment: papers; }
 .publication-list li::before { content: counter(papers, decimal-leading-zero); position: absolute; top: 1.25rem; left: 0; color: var(--accent); font-size: .7rem; font-weight: 600; letter-spacing: .08em; }
 .publication-list p { margin: 0; }
 .paper-title { color: var(--ink) !important; font-size: 16px; font-weight: 600; line-height: 1.5; }
@@ -63,6 +64,10 @@ section p { margin: 0 0 12px; color: var(--ink-soft); }
 .authors strong { color: var(--ink); font-weight: 600; }
 .venue { margin-top: 2px !important; color: var(--muted) !important; font-size: 14px; font-style: italic; }
 .paper-link { margin-left: .45rem; color: var(--accent); font-style: normal; white-space: nowrap; }
+.education-entry { padding: 0; }
+.education-entry p { margin: 0; }
+.education-degree { color: var(--ink); font-weight: 600; }
+.education-school { margin-top: 3px !important; font-size: 14px; color: var(--muted); }
 
 @media (max-width: 600px) {
   .container { box-sizing: border-box; width: 100%; margin: 32px auto 48px; padding: 0 20px; }
