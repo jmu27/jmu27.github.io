@@ -40,7 +40,7 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-
 }
 h1 { margin: 0 0 .2em; font-size: 32px; font-weight: 600; line-height: 1.1; letter-spacing: 0; }
 .bio { margin: 0 0 14px; }
-.bio p { margin: 0; color: var(--ink-soft); font-size: 16px; line-height: 1.5; }
+.bio p { margin: 0; color: var(--ink-soft); font-size: 16px; line-height: 1.5; text-align: justify; }
 .bio p:last-child { margin-bottom: 0; }
 .social-links { display: flex; align-items: center; gap: 1rem; }
 .social-links a { width: 20px; height: 20px; display: inline-flex; color: var(--ink); }
