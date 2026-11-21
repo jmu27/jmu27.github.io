@@ -55,9 +55,18 @@ section + section { border-top: 1px solid var(--rule); padding-top: 20px; }
 section h2 { margin: 0 0 16px; font-size: 20px; font-weight: 600; line-height: 1.5; letter-spacing: 0; }
 section p { margin: 0 0 12px; color: var(--ink-soft); }
 .equal-note { color: var(--muted); font-size: 14px; }
-.publication-group-title { margin: 16px 0 0; font-size: 16px; font-weight: 600; }
+.publication-group {
+  display: grid;
+  grid-template-columns: 9rem minmax(0, 1fr);
+  column-gap: 20px;
+  align-items: start;
+  padding: 12px 0;
+}
+.publication-group + .publication-group { border-top: 1px solid var(--rule); }
+.publication-group-title { margin: 0; font-size: 16px; font-weight: 600; }
 .publication-list { margin: 0; padding: 0; list-style: none; }
-.publication-list li { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 20px; padding: 12px 0; }
+.publication-list li { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 20px; }
+.publication-list li + li { margin-top: 16px; }
 .publication-label { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; padding-top: 3px; }
 .publication-venue { color: var(--accent); font-size: 14px; font-weight: 600; line-height: 1.3; }
 .publication-year { color: var(--muted); font-size: 13px; }
@@ -78,6 +87,7 @@ section p { margin: 0 0 12px; color: var(--ink-soft); }
 @media (max-width: 600px) {
   .container { box-sizing: border-box; width: 100%; margin: 32px auto 48px; padding: 0 20px; }
   .hero { grid-template-columns: 1fr; gap: 1.2rem; }
+  .publication-group { grid-template-columns: minmax(0, 1fr); row-gap: 8px; }
   .photo-frame { width: 128px; height: 128px; justify-self: start; }
 }
 @media (max-width: 480px) {
